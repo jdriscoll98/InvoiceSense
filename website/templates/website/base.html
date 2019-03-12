@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-		<title>{% block title %}Money Tracker{% endblock title %}</title>
+		<title>{% block title %}InvoiceSense{% endblock title %}</title>
 
 		<!-- CSS -->
 			<!-- Latest compiled and minified CSS -->
@@ -29,16 +29,56 @@
 
 			<script src="{% static 'website/js/main.js' %}"></script>
 
+			<script src="{% static 'website/js/formset.js' %}"></script>
+
 			{% block head_js %}
 			{% endblock head_js %}
 			<link rel="shortcut icon" href="{% static 'website/images/logo.jpg' %}" />
+			<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+			<style type="text/css">
+				body {
+				  background: url("{% static 'website/images/bg.jpg' %}") no-repeat center center fixed;
+				  -webkit-background-size: cover;
+				  -moz-background-size: cover;
+				  -o-background-size: cover;
+				  background-size: cover;
+				  font-family: 'Roboto', sans-serif;
+				  font-weight: bold;
+				  overflow-x: hidden !important;
+				}
+			</style>
 	</head>
 	<body>
 
-		{% include 'website/navbar.html' %}
+		<div id="page-container">
 
-		{% block content %}
-		{% endblock content %}
+			<div id="content-wrap">
+				{% include 'website/navbar.html' %}
+				{% block content %}
+				{% endblock content %}
+			</div>
+
+			<div id="footer">
+				<div class="row">
+					<div class="col" style="margin-top:10px;">
+						<h5><b>Created By</b></h5>
+						<h6>Tech and Mech USA</h6>
+					</div>
+					<div class="col">
+						<i class="fab fa-facebook-square"></i>
+						<i class="fab fa-youtube"></i>
+						<i class="fab fa-linkedin"></i>
+						<i class="fab fa-twitter-square"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+					<div class="col" style="margin-top:10px;text-align:right;">
+						<text style="position:relative;top:3px;margin-right:10px;">© 2019 Tech and Mech USA LLC</text>
+						<img class="footer-img" src="{% static 'website/images/logo.jpg' %}">
+					</div>
+				</div>
+			</div>
+
+		</div>
 
 		{% block js %}
 		{% endblock js %}

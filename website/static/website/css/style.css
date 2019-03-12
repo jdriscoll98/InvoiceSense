@@ -12,11 +12,56 @@ input, select {
   font-size: 20px;
   padding: 5px;
 }
+
+h2 {
+  color: white;
+}
+
+a, a:link, a:active, a:visited {
+  color: var(--secondary-color);
+}
+a:hover {
+  color: var(--primary-color);
+}
+
 /* *********** Bootstrap Customization************** */
 .navbar-dark, .bg-dark{
   background-color: var(--secondary-color) !important;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(255,255,255,1) !important;
+-moz-box-shadow: 0px 1px 3px 0px rgba(255,255,255,1) !important;
+box-shadow: 0px 1px 3px 0px rgba(255,255,255,1) !important;
 }
 
+table, .table {
+  -webkit-box-shadow: 0px 2px 5px 2px rgba(168,168,168,1);
+  -moz-box-shadow: 0px 2px 5px 2px rgba(168,168,168,1);
+  box-shadow: 0px 2px 5px 2px rgba(168,168,168,1);
+  background-color: white;
+  border-radius: 10px !important;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+thead {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 20px;
+}
+
+th:first-child {
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+th, tr {
+  border: none !important;
+}
+/* ************ Font Awesome Customization  ******************* */
 .fa:hover, .far:hover, .fas:hover {
   cursor: pointer;
 }
@@ -28,18 +73,19 @@ input, select {
 .fa-edit {
   color: orange;
 }
-
-.fa-plus {
-  color: green;
+.fa-pencil-alt {
+  color: var(--primary-color);
 }
 
-table, .table {
-  -webkit-box-shadow: 0px 2px 5px 2px rgba(168,168,168,1);
-  -moz-box-shadow: 0px 2px 5px 2px rgba(168,168,168,1);
-  box-shadow: 0px 2px 5px 2px rgba(168,168,168,1);
-  margin-top: 50px;
-  background-color: white;
-  border-radius: 10px !important;
+.fa-plus, .fa-plus-square, .fa-dollar-sign {
+  color: green;
+}
+.fa-plus-square {
+  background: white;
+}
+
+.fa-ticket-alt {
+  color: yellow;
 }
 /* *************** Custom Classes ******************* */
 
@@ -95,4 +141,38 @@ table, .table {
 .inverted-secondary-colors {
     color: var(--secondary-color);
     background-color: white;
+}
+
+/* ************* */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+	overflow: hidden;
+}
+#content-wrap {
+  padding-bottom: 12rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+	background-color:white;
+	-webkit-box-shadow: 0px -1px 5px 0px rgba(189,189,189,1);
+	-moz-box-shadow: 0px -1px 5px 0px rgba(189,189,189,1);
+	box-shadow: 0px -1px 5px 0px rgba(189,189,189,1);
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 25px;
+}
+
+.footer-img {
+  border-radius: 50%;
+  max-height: 50px;
+}
+
+.fab {
+  font-size: 50px;
+  padding: 10px 0;
+  margin-left: 10px;
 }
