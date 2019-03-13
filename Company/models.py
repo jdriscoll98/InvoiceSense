@@ -5,7 +5,13 @@ from django.contrib.auth.models import User
 
 
 class Company(models.Model):
+    class Meta:
+        verbose_name_plural = "companies"
+        
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 class Employee(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
